@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <!-- Überschrift -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deine Optionen"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Eingabefeld -->
+    <EditText
+        android:id="@+id/inputOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Option eingeben "
+        android:inputType="textCapSentences"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+    <!-- Button Hinzufügen -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Hinzufügen (+)"
+        android:backgroundTint="@color/color_light_blue"
+        app:layout_constraintTop_toBottomOf="@+id/inputOption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Text: "Aktuelle Liste:" -->
+    <TextView
+        android:id="@+id/tvListHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Aktuelle Liste:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Die eigentliche Liste (Scrollbar wäre gut, aber TextView reicht für den Anfang) -->
+
+    <!-- Der große Entscheidungs-Button -->
+
+    <!-- Das Ergebnis (Groß und Orange) -->
+
+    <TextView
+        android:id="@+id/textOptionList"
+        android:layout_width="371dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="#F0F0F0"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/btnDecide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvListHeader"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnDecide"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="228dp"
+        android:backgroundTint="@color/color_light_blue"
+        android:text="WÄHLE ZUFÄLLIG!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOptionList" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_light_blue"
+        app:layout_constraintTop_toBottomOf="@+id/btnDecide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- PANDA BILD UNTEN RECHTS -->
+    <!-- src="@drawable/img" -> Das ist der Name aus deinem anderen Layout -->
+    <ImageView
+        android:id="@+id/imagePandaCorner"
+        android:layout_width="115dp"
+        android:layout_height="114dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="Panda"
+        android:src="@drawable/img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <!-- Anweisungstext im Hintergrund -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lege mind. 2 Finger auf..."
+        android:textSize="24sp"
+        android:textColor="#AAAAAA"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Das Panda Bild unten rechts -->
+    <ImageView
+        android:id="@+id/imagePandaCorner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/img"
+        android:contentDescription="Panda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- UNSER SPEZIAL-VIEW -->
+    <!-- WICHTIG: Ersetze 'com.example.entscheidungpanda' mit deinem exakten Paketnamen, -->
+    <!-- falls er anders ist. Der Name muss zur FingerView.kt Datei passen. -->
+    <com.example.entscheidungpanda.FingerView
+        android:id="@+id/fingerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

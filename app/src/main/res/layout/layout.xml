@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/mytoolbar"
+        android:layout_width="416dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="45dp"
+        android:background="@color/color_light_blue"
+        android:text="Entscheidungs Panda"
+        android:title="@string/der_entscheidungspanda"
+        android:titleTextColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/myButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity" />
+
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="281dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/color_light_blue"
+        android:text="Ja oder Nein?"
+        app:layout_constraintBottom_toTopOf="@+id/btnCustom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="openSecondActivity" />
+
+    <Button
+        android:id="@+id/btnCustom"
+        android:layout_width="276dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/color_light_blue"
+        android:text="Eigene Optionen"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinger"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFinger"
+        android:layout_width="285dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="63dp"
+        android:background="@color/color_light_blue"
+        android:text="Fingerroulette"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustom" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="226dp"
+        android:layout_height="0dp"
+        android:text="Der Entscheider-Panda "
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mytoolbar" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="110dp"
+        android:layout_height="212dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="97dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginBottom="108dp"
+        android:fontFamily="cursive"
+        android:text="Wie kann ich dir helfen?"
+        android:textColor="#03A9F4"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
